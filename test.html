@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="counter" value="25"/>
+<button type="button" class="increment-btn">Increment</button>
+</body>
+<script>
+    var $button = document.querySelector('.increment-btn');
+var $counter = document.querySelector('.counter');
+
+$button.addEventListener('click', function(){
+  $counter.value = parseInt($counter.value) - 3; // `parseInt` converts the `value` from a string to a number
+}, false);
+</script>
+</html>

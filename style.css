@@ -1,0 +1,145 @@
+body{
+  background: url('end.png');
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: auto auto auto auto auto;
+  /* grid-auto-rows: 1fr; */
+  text-align: center;
+  color: aliceblue;
+  margin: 0 auto;
+  height: 480PX;
+  /* border: 2px solid white; */
+  /* margin-top: 10%; */
+}
+
+/* Just to make the grid visible */
+.grid > * {
+  background: rgba(84, 109, 221, 0.514);
+  border: 1px white solid;
+  cursor: pointer;
+}
+
+.grid > *:hover {
+  background: rgb(37, 3, 3);
+}
+
+button{
+  height: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.game-header{
+  color: transparent;
+}
+.tile-text{
+  font-size: 40px;
+  background: rgb(40, 61, 221);
+  box-shadow: 0 0 3px #ccc;
+}
+
+h2{
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-container{
+  background-image: url(image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  height: 520px;
+  margin-top: 4% !important;
+  margin: 0 auto;
+  border: 3px solid rgba(234, 227, 240, 0.103);
+  /* height: 20%;  */
+}
+
+.container{
+  background-image: url(image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 500px; */
+  margin: 0 auto;
+  height: 660px;
+  margin-top: -49%;
+}
+
+.score-board{
+  display: flex;
+  margin: 0 auto;
+  font-size: 12px;
+  color: white !important;
+  position: absolute;
+  top: 88%;
+  left: 85%;
+  border: 2px solid white;
+  border-radius: 6%;
+  padding: 0px 10px 0px 10px;
+  background: rgba(3, 3, 58, 0.562);
+  color: rgb(133, 19, 38);
+  box-shadow: 0 0 20px #fff;
+}
+
+#countdown{
+  text-align: center;
+  font-size: 82px;
+  border: 5px dashed rgb(2, 2, 252);
+  border-radius: 50%;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+  position: absolute;
+  top: 85%;
+  left: 48%;
+  color: white;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  background: rgba(3, 3, 58, 0.562);
+  box-shadow: 0 0 20px #fff;
+}
+
+button{
+  color: white;
+  background-color: rgb(16, 10, 77);
+  font-size: 1em;
+  height:3rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  /* align-self: center;
+  align-content: center; */
+  margin-left: 4%;
+  margin-bottom: 1%;
+  cursor: pointer;
+  position: absolute;
+  top: 86%;
+  /* left: 85%; */
+  border: 2px solid white;
+  border-radius: 6%;
+  padding: 0px 10px 0px 10px;
+  background: rgba(201, 11, 11, 0.562);
+  color: #fff;
+  box-shadow: 0 0 20px #fff;
+}
+
+.bottom-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-self: center;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <title>Guess the image</title>
+  </head>
+<body>
+
+<main>
+  <h1 class="game-header">Guess the image underneath the tiles</h1>
+</main>
+  <div class="grid-container">
+    <div class="grid">
+      <div id="tile-1" class="tile-text" ><h2>&times;</h2></div>
+      <div id="tile-2" class="tile-text" ><h2>&#8722;</h2></div>
+      <div id="tile-3" class="tile-text" ><h2>&#43;</h2></div>
+      <div id="tile-4" class="tile-text" ><h2>&#61;</h2></div>
+      <div id="tile-5" class="tile-text" ><h2>%</h2></div>
+      <div id="tile-6" class="tile-text" ><h2><</h2></div>
+      <div id="tile-7" class="tile-text" ><h2>( )</h2></div>
+      <div id="tile-8" class="tile-text" ><h2>></h2></div>
+      <div id="tile-9" class="tile-text" ><h2>&</h2></div>
+      <div id="tile-10"class="tile-text" ><h2>&pi;</h2></div>
+      <div id="tile-11"class="tile-text" ><h2>&NotEqual;</h2></div>
+      <div id="tile-12"class="tile-text" ><h2>&leq;</h2></div>
+      <div id="tile-6" class="tile-text" ><h2>&#247; </h2></div>
+      <div id="tile-7" class="tile-text" ><h2>&sum;</h2></div>
+      <div id="tile-8" class="tile-text" ><h2>&ge;</h2></div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="score-board">
+  <h1 id="scoreB">30 Points</h1>
+</div>
+  <!-- Timer and start game button -->
+  <div class="timer-container">
+    <div onclick="timer();disableBtn()">
+      <button id="game-btn">Start Game</button>
+    </div>
+  </div>
+  <div id="countdown">60</div>
+
+  </div>
+</body>
+<script>
+      const items = document.querySelectorAll(".tile-text");
+      var score = 10;
+      items.forEach(card => card.addEventListener('click', newColor, newscore))
+      function newColor(){
+        //deduct one from the score when clicked and times the value by 10
+        score--;
+        var point = score*3 + " " + "Pts";
+        if (point == 0) {
+          console.log('hello zeroo')
+        } else {
+          console.log('hello not zeroo')
+          // return;
+        }
+        console.log(this);
+        //move the tile to the back
+        this.style.zIndex = "-2";
+        console.log("points has been reduced by 10")
+        //set the score on the frontend to point
+        document.getElementById('scoreB').innerHTML=point;
+      }
+      function newscore(){
+        console.log(score);
+      }
+//This is the countdown timer function
+function timer(){
+    console.log('game should start')
+  var timeleft = 60;
+var downloadTimer = setInterval(function(){
+  if(timeleft < 0){
+    console.log('time is over, refresh the browser')
+    clearInterval(downloadTimer);
+    alert('game over')
+    document.getElementById("countdown").innerHTML = "Game Over";
+    //this is to refresh the browser
+    location.reload();
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+}
+</script>
+
+</html>
