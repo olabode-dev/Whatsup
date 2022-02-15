@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap');
+
 body{
   background: url('end.png');
   /* background-position: center; */
@@ -40,7 +42,7 @@ button{
   color: transparent;
 }
 .tile-text{
-  font-size: 40px;
+  font-size: 39px;
   background: rgb(40, 61, 221);
   box-shadow: 0 0 3px #ccc;
 }
@@ -53,7 +55,7 @@ h2{
 
 .grid-container{
   /* click here to change the image behind the tiles */
-  background-image: url(/img/cleopatra.svg);
+  background-image: url(/img/whiteHouse.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -94,23 +96,24 @@ h2{
 
 #countdown{
   text-align: center;
-  font-size: 82px;
-  font-weight: 500;
+  font-size: 43px;
+  font-weight: bold;
   border: 5px dashed rgb(2, 2, 252);
   border-radius: 50%;
   /* margin-left: 30%;
   margin-right: 30%; */
   position: absolute;
-  top: 85%;
+  top: 86%;
   left: 48%;
   color: white;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   align-items: center;
   justify-items: center;
   margin: 0 auto;
   background: rgba(3, 3, 58, 0.562);
   box-shadow: 0 0 20px #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button{
